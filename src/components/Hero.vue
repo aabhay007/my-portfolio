@@ -20,25 +20,25 @@
         <div class="hero-text">
           <h1>Hi, I'm <span class="highlight">Abhay</span></h1>
           <div class="typewriter-container">
-            <vue-typewriter-effect
-              :options="{
-                strings: [
-                  'Full Stack Developer',
-                  'UI/UX Enthusiast',
-                  'Problem Solver'
-                ],
-                autoStart: true,
-                loop: true,
-                deleteSpeed: 50
-              }"
-            />
+            <vue-typewriter-effect :options="{
+              strings: [
+                'Full Stack Developer',
+                'UI/UX Enthusiast',
+                'Problem Solver'
+              ],
+              autoStart: true,
+              loop: true,
+              deleteSpeed: 50
+            }" />
           </div>
           <div class="social-links">
             <a href="https://github.com/aabhay007" data-aos="fade-up" data-aos-delay="200">
-              <Icon name="lucide:github" size="24" />
+              
+              _<Icon name="lucide:github" size="24" />_
             </a>
             <a href="https://www.linkedin.com/in/abhay-bundel-540481271/" data-aos="fade-up" data-aos-delay="300">
-              <Icon name="lucide:linkedin" size="24" />
+              
+              _<Icon name="lucide:linkedin" size="24" />_
             </a>
           </div>
         </div>
@@ -49,20 +49,11 @@
     <section id="about" class="skills">
       <h2 data-aos="fade-up">Skills & Technologies</h2>
       <div class="skills-grid">
-        <div 
-          v-for="(skillSet, index) in skills" 
-          :key="skillSet.category" 
-          class="skill-card"
-          data-aos="fade-up"
-          :data-aos-delay="index * 100"
-        >
+        <div v-for="(skillSet, index) in skills" :key="skillSet.category" class="skill-card" data-aos="fade-up"
+          :data-aos-delay="index * 100">
           <h3>{{ skillSet.category }}</h3>
           <div class="tech-tags">
-            <span 
-              v-for="tech in skillSet.technologies" 
-              :key="tech" 
-              class="tech-tag"
-            >
+            <span v-for="tech in skillSet.technologies" :key="tech" class="tech-tag">
               {{ tech }}
             </span>
           </div>
@@ -74,13 +65,8 @@
     <section id="projects" class="projects">
       <h2 data-aos="fade-up">Featured Projects</h2>
       <div class="projects-grid">
-        <div 
-          v-for="(project, index) in projects" 
-          :key="project.title" 
-          class="project-card"
-          data-aos="fade-up"
-          :data-aos-delay="index * 100"
-        >
+        <div v-for="(project, index) in projects" :key="project.title" class="project-card" data-aos="fade-up"
+          :data-aos-delay="index * 100">
           <h3>{{ project.title }}</h3>
           <p>{{ project.description }}</p>
           <div class="project-tags">
@@ -90,10 +76,12 @@
           </div>
           <div class="project-links">
             <a :href="project.links.github">
-              <Icon name="lucide:github" size="20" />
+              
+              _<Icon name="lucide:github" size="20" />_
             </a>
             <a :href="project.links.live">
-              <Icon name="lucide:external-link" size="20" />
+              
+              _<Icon name="lucide:external-link" size="20" />_
             </a>
           </div>
         </div>
@@ -184,6 +172,9 @@ const skills = ref([
 
 <style scoped>
 /* Previous styles remain the same */
+body {
+  scroll-behavior: smooth scroll;
+}
 
 /* Add new styles for typewriter effect */
 .typewriter-container {
