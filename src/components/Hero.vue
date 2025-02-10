@@ -141,29 +141,29 @@ onMounted(() => {
 const projects = ref([
   {
     title: "E-Commerce Platform",
-    description: "Built a full-stack e-commerce platform using Next.js, Node.js, and MongoDB. Implemented features like user authentication, payment processing, and order management.",
-    tags: ["Next.js", "Node.js", "MongoDB", "Stripe"],
+    description: "Built a full-stack e-commerce platform using Dotnet MVC. Implemented features like user authentication, payment processing, and order management.",
+    tags: ["Dotnet", "MVC", "MSSQL", "Stripe"],
     links: {
-      github: "https://github.com/username/ecommerce",
+      github: "https://github.com/aabhay007/Ecomm_Web",
       live: "https://ecommerce-demo.com"
     }
   },
   {
-    title: "Task Management App",
-    description: "Developed a real-time task management application with drag-and-drop functionality, team collaboration features, and automated notifications.",
-    tags: ["React", "Firebase", "Material-UI", "Redux"],
+    title: "University Project",
+    description: "Developed a project for the University, using Node and React here we can manage all the departments and can buy books",
+    tags: ["React JS", "Node JS", "Open Auth", "Mongo DB"],
     links: {
-      github: "https://github.com/username/task-manager",
+      github: "https://github.com/aabhay007/University_Project",
       live: "https://task-manager-demo.com"
     }
   },
   {
-    title: "AI Content Generator",
-    description: "Created an AI-powered content generation tool that helps users create blog posts, social media content, and marketing copy using OpenAI's GPT-3 API.",
-    tags: ["Python", "Flask", "OpenAI", "React"],
+    title: "Accountability App",
+    description: "Created an automatic accountability app using Django and Vue Js, Here user can upload their bank statments and invoices. This software will automatically linked the invcoies with bank statements",
+    tags: ["Python", "Django", "Vue JS", "SQLITE"],
     links: {
-      github: "https://github.com/username/ai-content",
-      live: "https://ai-content-demo.com"
+      github: "https://github.com/aabhay007/accountablity_app",
+      live: "https://poc.csdevhub.com/"
     }
   }
 ]);
@@ -171,15 +171,15 @@ const projects = ref([
 const skills = ref([
   {
     category: "Frontend",
-    technologies: ["React JS", "Vue JS", "TypeScript", "Tailwind CSS", "Bootstrap"]
+    technologies: ["Vue JS", "React JS", "TypeScript", "Javascript", "Tailwind CSS"]
   },
   {
     category: "Backend",
-    technologies: ["DotNet", "Python", "Node Js", "Django", "PostgreSQL", "MSSQL", "MySQL"]
+    technologies: ["DotNet", "Python", "Node JS", "Django", "PostgreSQL", "MSSQL", "MySQL"]
   },
   {
     category: "Tools & Others",
-    technologies: ["Git", "Docker", "AWS", "Azure", "Figma"]
+    technologies: ["Git", "Docker", "AWS", "Azure", "AI Tools"]
   }
 ]);
 </script>
