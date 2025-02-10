@@ -19,18 +19,7 @@
       <div class="hero-content">
         <div class="hero-text">
           <h1>Hi, I'm <span class="highlight">Abhay</span></h1>
-          <div class="typewriter-container">
-            <vue-typewriter-effect :options="{
-              strings: [
-                'Full Stack Developer',
-                'UI/UX Enthusiast',
-                'Problem Solver'
-              ],
-              autoStart: true,
-              loop: true,
-              deleteSpeed: 50
-            }" />
-          </div>
+          <div class="typewriter">{{ displayedText }}<span class="cursor">|</span></div>
           <div class="social-links">
             <a href="https://github.com/aabhay007" data-aos="fade-up" data-aos-delay="200">
               
@@ -114,7 +103,34 @@ import { ref, onMounted } from 'vue';
 import VueTypewriterEffect from 'vue-typewriter-effect';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Typer } from 'vue3-typer';
 
+const texts = ["Full Stack Developer", "Software Developer", "Problem Solver"];
+const displayedText = ref("");
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+const typeEffect = () => {
+  const currentText = texts[textIndex];
+
+  if (isDeleting) {
+    displayedText.value = currentText.substring(0, charIndex--);
+  } else {
+    displayedText.value = currentText.substring(0, charIndex++);
+  }
+
+  if (!isDeleting && charIndex === currentText.length) {
+    setTimeout(() => (isDeleting = true), 1000);
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    textIndex = (textIndex + 1) % texts.length;
+  }
+
+  setTimeout(typeEffect, isDeleting ? 50 : 100);
+};
+
+onMounted(typeEffect);
 // Initialize AOS
 onMounted(() => {
   AOS.init({
@@ -172,10 +188,10 @@ const skills = ref([
 
 <style scoped>
 /* Previous styles remain the same */
-body {
-  scroll-behavior: smooth scroll;
+.typewriter-container {
+  font-size: 24px;
+  font-weight: bold;
 }
-
 /* Add new styles for typewriter effect */
 .typewriter-container {
   height: 50px;
@@ -185,11 +201,18 @@ body {
   margin: 1rem 0;
 }
 
-.Typewriter {
-  font-size: 1.5rem;
-  color: #bfdbfe;
+.typewriter {
+  font-size: 24px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
 }
-
+.cursor {
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
 /* Animation transitions */
 .skill-card,
 .project-card,
