@@ -100,10 +100,8 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import VueTypewriterEffect from 'vue-typewriter-effect';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Typer } from 'vue3-typer';
 
 const texts = ["Full Stack Developer", "Software Developer", "Problem Solver"];
 const displayedText = ref("");
