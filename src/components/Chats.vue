@@ -11,8 +11,8 @@
           <div v-for="(message, index) in history" :key="index" :class="['message', message.role]">
             <img :src="message.role === 'user' ? userAvatar : botAvatar" class="avatar" />
             <div class="message-content">
-              <strong v-if="message.role === 'user'">You:</strong>
-              <strong v-else>Lilly:</strong>
+              <strong v-if="message.role === 'user'">You: </strong>
+              <strong v-else>Lilly: </strong>
               <span>{{ message.content }}</span>
             </div>
           </div>
@@ -31,7 +31,9 @@
     data() {
       return {
         userMessage: '',
-        history: [],
+        history: [
+          { role: 'assistant', content: "Hello! My name is Lilly, and I was created and trained by Abhay. How can I assist you today?" }
+        ],
         isOpen: false,
         isTyping: false,
         userAvatar: 'https://i.pravatar.cc/40?img=3', // Placeholder user avatar
@@ -62,10 +64,6 @@
           const data = await response.json();
           let botResponse = data.response.response;
   
-          if (/your name|who made you|who created you|who trained you|who are you/i.test(userInput)) {
-            botResponse = "My name is Lilly, and I was created and trained by Abhay!";
-          }
-  
           setTimeout(() => {
             this.history.push({ role: 'assistant', content: botResponse });
             this.isTyping = false;
@@ -92,7 +90,7 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #007bff;
+    background: #474ce6;
     color: white;
     border: none;
     border-radius: 50%;
@@ -114,7 +112,7 @@
     flex-direction: column;
   }
   .chat-header {
-    background: #007bff;
+    background: #474ce6;
     color: white;
     padding: 10px;
     display: flex;
@@ -160,7 +158,7 @@
     max-width: 75%;
   }
   .user .message-content {
-    background: #007bff;
+    background: #474ce6;
     color: white;
     align-self: flex-end;
   }
@@ -177,7 +175,7 @@
     border-radius: 5px;
   }
   button {
-    background: #007bff;
+    background: #474ce6;
     color: white;
     border: none;
     padding: 8px 12px;
