@@ -51,7 +51,7 @@
         this.isTyping = true;
         this.$nextTick(() => this.scrollToBottom());
         
-        const userInput = this.userMessage;
+        const userInput = `Answer concisely: ${this.userMessage}`;
         this.userMessage = ''; // Clear input instantly
         
         const queryParams = new URLSearchParams({
