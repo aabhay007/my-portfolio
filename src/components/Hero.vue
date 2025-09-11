@@ -180,7 +180,7 @@ const projects = ref([
 const skills = ref([
   {
     category: "Frontend",
-    technologies: ["Vue JS", "React JS", "TypeScript", "Javascript", "Tailwind CSS"]
+    technologies: ["Vue JS", "React JS", "Next JS","Nuxt JS", "TypeScript", "JavaScript", "Tailwind CSS"]
   },
   {
     category: "Backend",
@@ -188,7 +188,7 @@ const skills = ref([
   },
   {
     category: "Tools & Others",
-    technologies: ["Git", "Docker", "AWS", "Azure", "AI Tools"]
+    technologies: ["Git", "Github", "Docker", "AWS", "Azure", "Cloudflare", "Vercel", "Render", "Railway", "AI Tools"]
   }
 ]);
 </script>
