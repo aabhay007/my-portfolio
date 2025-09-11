@@ -149,21 +149,21 @@ const projects = ref([
     }
   },
   {
-    title: "University Project",
-    description: "Developed a project for the University, using Node and React here we can manage all the departments and can buy books",
-    tags: ["React JS", "Node JS", "Open Auth", "Mongo DB"],
+    title: "MOCO",
+    description: "Developed a project for Fun, using .Net core and Nuxt/Vue JS here we can upload images for free and in return we can get their live links",
+    tags: ["NUXT JS", "Open Auth", ".NET CORE","Postgres DB"],
     links: {
-      github: "https://github.com/aabhay007/University_Project",
-      live: "https://task-manager-demo.com"
+      github: "https://github.com/aabhay007/moco-backend",
+      live: "https://moco-frontend.vercel.app"
     }
   },
   {
-    title: "Accountability App",
-    description: "Created an automatic accountability app using Django and Vue Js, Here user can upload their bank statments and invoices. This software will automatically linked the invcoies with bank statements",
-    tags: ["Python", "Django", "Vue JS", "SQLITE"],
+    title: "AG Grid(POC)",
+    description: "This is POC to demonstrate how to create a high performance AG Grid. Which handles 10 Millions+ records easily with out breaking and smooth performance.",
+    tags: ["VUE JS", "AG GRID", "HYPER FORMULA"],
     links: {
-      github: "https://github.com/aabhay007/accountablity_app",
-      live: "https://poc.csdevhub.com/"
+      github: "https://github.com/aabhay007/AgGrid_With_HyperFormula",
+      live: "https://ag-grid-with-hyper-formula.vercel.app/"
     }
   }
 ]);
