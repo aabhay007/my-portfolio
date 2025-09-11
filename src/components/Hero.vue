@@ -139,13 +139,13 @@ onMounted(() => {
 });
 
 const projects = ref([
-  {
-    title: "E-Commerce Platform",
-    description: "Built a full-stack e-commerce platform using Dotnet MVC. Implemented features like user authentication, payment processing, and order management.",
-    tags: ["Dotnet", "MVC", "MSSQL", "Stripe"],
+   {
+    title: "Bundel Ayurveda",
+    description: "This project is developed for patients to make appointments directly for treatment through the whatsapp and also able to locate the exact location of the service area.",
+    tags: ["VUE JS", "MAPS", "WhatsApp", "Tailwind"],
     links: {
-      github: "https://github.com/aabhay007/Ecomm_Web",
-      live: "https://ecommerce-demo.com"
+      github: "https://github.com/aabhay007/Bundel-Ayurveda",
+      live: "https://bundel-ayurveda.vercel.app/"
     }
   },
   {
@@ -164,6 +164,15 @@ const projects = ref([
     links: {
       github: "https://github.com/aabhay007/AgGrid_With_HyperFormula",
       live: "https://ag-grid-with-hyper-formula.vercel.app/"
+    }
+  },
+    {
+    title: "E-Commerce Platform",
+    description: "Built a full-stack e-commerce platform using Dotnet MVC. Implemented features like user authentication, payment processing, and order management.",
+    tags: ["Dotnet", "MVC", "MSSQL", "Stripe"],
+    links: {
+      github: "https://github.com/aabhay007/Ecomm_Web",
+      live: "https://ecommerce-demo.com"
     }
   }
 ]);
