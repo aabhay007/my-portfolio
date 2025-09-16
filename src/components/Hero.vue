@@ -158,6 +158,15 @@ const projects = ref([
     }
   },
   {
+    title: "Simple ToDo",
+    description: "A simple todo app for tracking your everyday tasks in real time. I have used GraphQL instead of Rest Apis. Also both frontend and backend are dockerised.",
+    tags: ["React JS", ".NET CORE", "GRAPH QL","Postgres DB"],
+    links: {
+      github: "https://github.com/aabhay007/SimpleToDo",
+      live: "https://simpletodo-frontend.onrender.com/"
+    }
+  },
+  {
     title: "AG Grid(POC)",
     description: "This is POC to demonstrate how to create a high performance AG Grid. Which handles 10 Millions+ records easily with out breaking and smooth performance.",
     tags: ["VUE JS", "AG GRID", "HYPER FORMULA"],
