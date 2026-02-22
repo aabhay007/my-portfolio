@@ -148,6 +148,15 @@ const projects = ref([
       live: "https://bundel-ayurveda.vercel.app/"
     }
   },
+   {
+    title: "Oilers Services Inc",
+    description: "This project is developed for clients interested in real-estate. Clients can send their query directly through what's app and email",
+    tags: ["NEXT JS", "EMAIL JS", "WhatsApp", "SEO"],
+    links: {
+      github: "https://github.com/aabhay007/Oilers-Services-Inc",
+      live: "https://oilersservices.com/"
+    }
+  },
   {
     title: "MOCO",
     description: "Developed a project for Fun, using .Net core and Nuxt/Vue JS here we can upload images for free and in return we can get their live links",
